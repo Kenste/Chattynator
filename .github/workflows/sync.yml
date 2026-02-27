@@ -24,5 +24,8 @@ jobs:
           echo "Already up to date, skipping push"
         else
           git merge upstream/main --no-edit
+          TAG="auto-$(date +%Y%m%d%H%M%S)"
+          git tag "$TAG"
           git push
+          git push origin "$TAG"
         fi
