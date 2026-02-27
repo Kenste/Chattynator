@@ -22,7 +22,5 @@ jobs:
         fetch-depth: 0
 
     - uses: BigWigsMods/packager@master
-      with:
-        args: -p 1273281 -a 4N2mA4GL
       env:
-        CF_API_KEY: ${{ secrets.plusmouse_curseforge }}
+        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
